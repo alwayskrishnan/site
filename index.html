@@ -1,281 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Website Temporarily Closed</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-   * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treatz Bakery Update</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#f6d4bf,#f3c3a3);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Poppins',sans-serif;
+  padding:20px 0;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  position: relative;
-  overflow-x: hidden;
+.wrapper{
+  background:#fff;
+  max-width:650px;
+  width:92%;
+  border-radius:36px;
+  padding:50px 35px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.14);
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('https://picsum.photos/seed/cake-pattern/1200/800.jpg');
-  background-size: cover;
-  opacity: 0.1;
-  z-index: -1;
+/* HEADINGS */
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  color:#f04f3e;
+  margin-bottom:14px;
 }
 
-.container {
-  max-width: 90%;
-  width: 600px;
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transform: translateY(0);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+h2{
+  font-size:24px;
+  color:#ff6f61;
+  margin-bottom:22px;
 }
 
-.container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+/* LOCATION */
+.location{
+  font-size:18px;
+  font-weight:600;
+  color:#333;
+  line-height:1.5;
 }
 
-.image-container {
-  padding: 30px 20px;
-  background-color: #fff5f5;
-  position: relative;
-  overflow: hidden;
+.location span{
+  display:block;
+  font-weight:500;
 }
 
-.image-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-  background-size: 300% 100%;
-  animation: gradient 3s ease infinite;
+.divider{
+  height:1px;
+  background:#eee;
+  margin:22px auto 32px;
+  width:80%;
 }
 
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* SERVICE CARDS */
+.card{
+  background:#ffecec;
+  border-radius:22px;
+  padding:24px 20px;
+  margin-bottom:22px;
 }
 
-.image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+.card h3{
+  font-size:24px;
+  font-weight:700;
+  color:#333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-bottom:8px;
 }
 
-.content {
-  padding: 45px 40px;
+.card p{
+  font-size:16px;
+  color:#555;
+  margin-bottom:14px;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #2d2d2d;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
+/* CALL OR WHATSAPP */
+.whatsapp{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  font-size:20px;
+  font-weight:600;
+  color:#ff6f61;
 }
 
-h1::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, #ff6b6b, #feca57);
-  border-radius: 3px;
+.whatsapp i{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
 }
 
-.message {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  color: #555;
+/* FOOTER NOTE */
+.note{
+  margin-top:26px;
+  font-size:15px;
+  color:#777;
+  font-style:italic;
 }
 
-.highlight {
-  color: #ff6b6b;
-  font-weight: 600;
-  position: relative;
-  display: inline-block;
-}
-
-.highlight::after {
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background-color: rgba(255, 107, 107, 0.2);
-  z-index: -1;
-  border-radius: 3px;
-}
-
-.contact-info {
-  background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
-  border-radius: 16px;
-  padding: 25px;
-  margin: 30px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-info::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 100px;
-  height: 100px;
-  background-color: rgba(255, 107, 107, 0.1);
-  border-radius: 50%;
-}
-
-.contact-info h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #2f2f2f;
-  font-weight: 600;
-}
-
-.phone-number {
-  font-size: 24px;
-  font-weight: 600;
-  color: #ff6b6b;
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  transition: transform 0.2s ease;
-}
-
-.phone-number:hover {
-  transform: scale(1.05);
-}
-
-.phone-number i {
-  font-size: 20px;
-  background-color: #ff6b6b;
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
-}
-
-.note {
-  margin-top: 20px;
-  font-size: 15px;
-  color: #777;
-  font-style: italic;
-  position: relative;
-  padding: 0 20px;
-}
-
-.note::before, .note::after {
-  content: "✨";
-  position: absolute;
-  top: 0;
-}
-
-.note::before {
-  left: 0;
-}
-
-.note::after {
-  right: 0;
-}
-
-.emoji-decoration {
-  font-size: 24px;
-  margin: 0 5px;
-  display: inline-block;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 28px;
+/* TABLET */
+@media(max-width:768px){
+  .wrapper{
+    width:94%;
+    padding:40px 30px;
   }
-
-  .message {
-    font-size: 16px;
-  }
-
-  .phone-number {
-    font-size: 20px;
-  }
-
-  .content {
-    padding: 35px 25px;
-  }
+  
+  h1{font-size:28px}
+  h2{font-size:22px}
+  .location{font-size:17px}
+  .card{padding:22px 18px}
+  .card h3{font-size:22px}
+  .card p{font-size:15px}
+  .whatsapp{font-size:18px}
+  .whatsapp i{width:40px;height:40px;font-size:20px}
 }
-  </style>
+
+/* MOBILE */
+@media(max-width:600px){
+  body{padding:15px 0}
+  .wrapper{
+    width:95%;
+    padding:35px 25px;
+    border-radius:24px;
+  }
+  
+  h1{font-size:24px}
+  h2{font-size:20px}
+  .location{font-size:16px}
+  .card{padding:20px 16px;margin-bottom:20px}
+  .card h3{font-size:20px}
+  .card p{font-size:15px}
+  .whatsapp{font-size:16px}
+  .whatsapp i{width:38px;height:38px;font-size:18px}
+  .note{font-size:14px}
+}
+
+/* SMALL MOBILE */
+@media(max-width:400px){
+  .wrapper{
+    width:98%;
+    padding:30px 20px;
+    border-radius:20px;
+  }
+  
+  h1{font-size:22px}
+  h2{font-size:18px}
+  .location{font-size:15px}
+  .card{padding:18px 15px;margin-bottom:18px}
+  .card h3{font-size:18px}
+  .card p{font-size:14px}
+  .whatsapp{font-size:15px}
+  .whatsapp i{width:36px;height:36px;font-size:17px}
+  .note{font-size:13px}
+}
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    
-    
-    <div class="content">
-      <h1>We're Temporarily Closed</h1>
-      
-      <p class="message">
-        We are currently <span class="highlight">closed for Relocation</span>. 
-        We're moving to a better location to serve you even better!
-        <span class="emoji-decoration">🎂</span>
-      </p>
-      
-      <div class="contact-info">
-        <h2>Need Custom Cakes?</h2>
-        <p class="message">We're still taking custom cake orders during our move!</p>
-        <div class="phone-number">
-          <i class="fas fa-phone-alt"></i>
-         (469)-476-2487
-        </div>
-      </div>
+<div class="wrapper">
 
-      
-      <p class="note">We apologize for any inconvenience and appreciate your patience.</p>
+  <h1>Peacock is Permanently Closed</h1>
+  <h2>Treatz Bakery is Still Accepting Cake Orders!</h2>
+
+  <div class="location">
+    🎂 📍 Now at Sarigama Market Place, 12955 Main St Apt 1000,
+    <span>Frisco, Texas 75035</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Custom Cakes -->
+  <div class="card">
+    <h3>🎂 Custom Cakes and Desserts</h3>
+<p>Order cakes and desserts for all occasions!</p>
+    <div class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+      Call (or) WhatsApp: (469) 476-2487
     </div>
   </div>
+
+  <!-- Catering -->
+  <div class="card">
+    <h3>🍴 Catering Services</h3>
+    <p>Book our catering services for your events!</p>
+    <div class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+      Call (or) WhatsApp: (469) 207-3878
+    </div>
+  </div>
+
+  <p class="note">
+    Thank you for your continued support! We look forward to serving you at our new location.
+  </p>
+
+</div>
 
 </body>
 </html>
