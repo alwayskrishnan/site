@@ -138,64 +138,73 @@ h2{
   margin-bottom:12px;
 }
 
-/* CONTACT BUTTONS */
-.contact-buttons {
+/* CONTACT BAR */
+.contact-bar {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  border-radius: 30px;
   margin-top: 8px;
-  flex-wrap: wrap;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+  width: fit-content;
+  max-width: 100%;
 }
 
-.contact-btn {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  font-size:14px;
-  font-weight:600;
-  text-decoration:none;
-  transition:transform 0.2s;
-  padding:8px 12px;
-  border-radius:30px;
+.whatsapp-section {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  background: #25D366;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.whatsapp-section:hover {
+  background: #128C7E;
+  transform: scale(1.02);
+}
+
+.call-section {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  background: #0077B5;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.call-section:hover {
+  background: #005885;
+  transform: scale(1.02);
+}
+
+.whatsapp-icon, .call-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  margin-right: 10px;
+}
+
+.phone-number {
+  font-size: 16px;
+  font-weight: 600;
   color: white;
   white-space: nowrap;
 }
 
-.contact-btn:hover {
-  transform:scale(1.05);
-}
-
-.whatsapp-btn {
-  background:#25D366;
-  box-shadow:0 4px 8px rgba(37,211,102,0.3);
-}
-
-.whatsapp-btn:hover {
-  background:#128C7E;
-  box-shadow:0 6px 12px rgba(37,211,102,0.4);
-}
-
-.call-btn {
-  background:#4285F4;
-  box-shadow:0 4px 8px rgba(66,133,244,0.3);
-}
-
-.call-btn:hover {
-  background:#1a73e8;
-  box-shadow:0 6px 12px rgba(66,133,244,0.4);
-}
-
-.contact-btn i {
-  width:28px;
-  height:28px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.2);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:14px;
-  flex-shrink: 0;
+.pipe {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.3);
+  margin: 0 2px;
 }
 
 /* QR CODE SECTION */
@@ -280,8 +289,9 @@ h2{
   .card{padding:24px}
   .card h3{font-size:24px}
   .card p{font-size:16px}
-  .contact-btn{font-size:16px}
-  .contact-btn i{width:32px;height:32px;font-size:16px}
+  .phone-number{font-size:18px}
+  .whatsapp-icon, .call-icon{width:40px;height:40px;font-size:22px;margin-right:12px}
+  .pipe{height:40px}
   .qr-code{width:120px;height:120px}
   .qr-logo{width:28px;height:28px;font-size:14px}
 }
@@ -299,8 +309,9 @@ h2{
   .card{padding:18px}
   .card h3{font-size:20px}
   .card p{font-size:15px}
-  .contact-btn{font-size:14px}
-  .contact-btn i{width:28px;height:28px;font-size:14px}
+  .phone-number{font-size:16px}
+  .whatsapp-icon, .call-icon{width:36px;height:36px;font-size:20px;margin-right:10px}
+  .pipe{height:36px}
   .qr-code{width:100px;height:100px}
   .qr-logo{width:24px;height:24px;font-size:12px}
 }
@@ -321,8 +332,9 @@ h2{
   .card{padding:16px;margin-bottom:16px}
   .card h3{font-size:18px}
   .card p{font-size:14px}
-  .contact-btn{font-size:13px}
-  .contact-btn i{width:26px;height:26px;font-size:13px}
+  .phone-number{font-size:14px}
+  .whatsapp-icon, .call-icon{width:32px;height:32px;font-size:18px;margin-right:8px}
+  .pipe{height:32px}
   .note{font-size:13px}
   .qr-code{width:90px;height:90px}
   .qr-logo{width:20px;height:20px;font-size:10px}
@@ -337,8 +349,8 @@ h2{
     text-align: center;
   }
   
-  .contact-buttons {
-    justify-content: center;
+  .contact-bar {
+    margin: 8px auto 0;
   }
 }
 
@@ -356,8 +368,9 @@ h2{
   .card{padding:14px;margin-bottom:14px}
   .card h3{font-size:16px}
   .card p{font-size:13px}
-  .contact-btn{font-size:12px}
-  .contact-btn i{width:24px;height:24px;font-size:12px}
+  .phone-number{font-size:13px}
+  .whatsapp-icon, .call-icon{width:30px;height:30px;font-size:16px;margin-right:6px}
+  .pipe{height:30px}
   .note{font-size:12px}
   .qr-code{width:80px;height:80px}
   .qr-logo{width:18px;height:18px;font-size:9px}
@@ -389,14 +402,19 @@ h2{
       <div class="card-left">
         <h3>🎂 Custom Cakes and Desserts</h3>
         <p>Order cakes and desserts for all occasions!</p>
-        <div class="contact-buttons">
-          <a href="https://wa.me/14694762487" target="_blank" class="contact-btn whatsapp-btn">
-            <i class="fab fa-whatsapp"></i>
-            WhatsApp (469) 476-2487
+        <div class="contact-bar">
+          <a href="https://wa.me/14694762487" target="_blank" class="whatsapp-section">
+            <div class="whatsapp-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <span class="phone-number">(469) 476-2487</span>
           </a>
-          <a href="tel:+14694762487" class="contact-btn call-btn">
-            <i class="fas fa-phone"></i>
-            Call (469) 476-2487
+          <div class="pipe"></div>
+          <a href="tel:+14694762487" class="call-section">
+            <div class="call-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <span class="phone-number">(469) 476-2487</span>
           </a>
         </div>
       </div>
@@ -422,14 +440,19 @@ h2{
       <div class="card-left">
         <h3>🍴 Catering Services</h3>
         <p>Book our catering services for your events!</p>
-        <div class="contact-buttons">
-          <a href="https://wa.me/14692073878" target="_blank" class="contact-btn whatsapp-btn">
-            <i class="fab fa-whatsapp"></i>
-            WhatsApp (469) 207-3878
+        <div class="contact-bar">
+          <a href="https://wa.me/14692073878" target="_blank" class="whatsapp-section">
+            <div class="whatsapp-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <span class="phone-number">(469) 207-3878</span>
           </a>
-          <a href="tel:+14692073878" class="contact-btn call-btn">
-            <i class="fas fa-phone"></i>
-            Call (469) 207-3878
+          <div class="pipe"></div>
+          <a href="tel:+14692073878" class="call-section">
+            <div class="call-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <span class="phone-number">(469) 207-3878</span>
           </a>
         </div>
       </div>
